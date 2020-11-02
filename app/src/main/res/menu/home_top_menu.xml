@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <item
+     android:id="@+id/igtv"
+     android:title="@string/igtv"
+     android:icon="@drawable/ic_camera"
+     app:showAsAction="ifRoom"
+     />
+    <item
+        android:id="@+id/direct"
+        android:title="@string/dm"
+        android:icon="@drawable/ic_direct"
+        app:showAsAction="always"
+        />
+</menu>

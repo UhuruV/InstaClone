@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/grid"
+        android:title="@string/grid"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_grid"/>
+    <item
+        android:id="@+id/hamburger"
+        android:title="@string/linear"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_hamburger_menu"/>
+
+    <item
+        android:id="@+id/tag"
+        android:title="@string/tag"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_save"/>
+
+</menu>
