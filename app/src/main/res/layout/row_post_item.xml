@@ -27,12 +27,12 @@
 
     <ImageView
         android:id="@+id/ivAvatar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="70dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
@@ -40,12 +40,14 @@
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAvatar"
         app:layout_constraintStart_toEndOf="@+id/ivAvatar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/ivAvatar"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/divider"
@@ -59,9 +61,10 @@
 
     <ImageView
         android:id="@+id/imgPost"
-        android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_width="408dp"
+        android:layout_height="248dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
         app:srcCompat="@android:drawable/progress_horizontal" />
@@ -190,8 +193,8 @@
 
     <ImageView
         android:id="@+id/ivCommentSection"
-        android:layout_width="39dp"
-        android:layout_height="37dp"
+        android:layout_width="26dp"
+        android:layout_height="22dp"
         android:layout_marginStart="31dp"
         android:layout_marginLeft="31dp"
         android:layout_marginTop="6dp"

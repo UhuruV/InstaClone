@@ -13,11 +13,10 @@ import kotlinx.android.synthetic.main.profile_highlight_items.view.*
 class InstaProfileAdapter(val instaHighlightList:List<Highlights>):RecyclerView.Adapter<InstaProfileAdapter.InstaProfileViewHolder>() {
 
     class InstaProfileViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstaProfileViewHolder {
-        val rowView=LayoutInflater.from(parent.context).inflate(R.layout.profile_row_list_item,parent,false)
+        val rowView=LayoutInflater.from(parent.context).inflate(R.layout.profile_highlight_items,parent,false)
         return InstaProfileViewHolder(rowView)
     }
 
@@ -31,6 +30,7 @@ class InstaProfileAdapter(val instaHighlightList:List<Highlights>):RecyclerView.
             .circleCrop()
             .into(holder.itemView.ivHighlights)
     }
+
 
     override fun getItemCount(): Int {
         return instaHighlightList.size

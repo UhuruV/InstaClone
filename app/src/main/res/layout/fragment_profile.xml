@@ -215,77 +215,108 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.54"
+        app:layout_constraintStart_toEndOf="@+id/divider6" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHighlights"
-        android:layout_width="0dp"
-        android:layout_height="106dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider6"
-        tools:listitem="@layout/profile_highlight_items" />
+        tools:listitem="@layout/profile_new_item" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarGrids"
-        android:layout_width="409dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="384dp"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/divider8"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarGrids" />
+        android:orientation="vertical" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
-        android:layout_width="409dp"
-        android:layout_height="461dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="384dp"
+        android:id="@+id/rvProfile"
+        android:layout_width="312dp"
+        android:layout_height="107dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rvHighlights"
+        tools:listitem="@layout/profile_highlight_items"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfilePost"
+        android:layout_width="0dp"
+        android:layout_height="218dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/profile_row_list_item" />
 
+    <ImageView
+        android:id="@+id/ivGrid"
+        android:layout_width="39dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvHighlights"
+        app:srcCompat="@drawable/ic_grid" />
+
     <View
-        android:id="@+id/divider9"
+        android:id="@+id/divider7"
         android:layout_width="0dp"
         android:layout_height="1dp"
+        android:layout_marginTop="5dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvHighlights" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="1"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/ivList"
+        android:layout_width="32dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider8"
+        app:layout_constraintStart_toEndOf="@+id/ivGrid"
+        app:layout_constraintTop_toBottomOf="@+id/divider7"
+        app:srcCompat="@drawable/ic_list" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvGrids"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView2"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider8"
-        tools:listitem="@layout/profile_row_list_item"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/ivList"
+        app:layout_constraintTop_toBottomOf="@+id/divider7"
+        app:srcCompat="@drawable/ic_save" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivGrid" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
